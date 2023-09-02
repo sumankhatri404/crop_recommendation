@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+     <!-- Favicon -->
+     <link href="{{url_for('static', filename = 'img/favicon.ico')}}" rel="icon">
+
+     <!-- Google Web Fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+ 
+     <!-- Icon Font Stylesheet -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+ 
+     <!-- Libraries Stylesheet -->
+     <link href="{{url_for('static', filename = 'lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+ 
+     <!-- Customized Bootstrap Stylesheet -->
+     <link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+ 
+     <!-- Template Stylesheet -->
+     <link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet">
+
+
+
+     
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+ <!-- Favicon -->
+ <link href="{{url_for('static', filename = 'img/favicon.ico')}}" rel="icon">
+
+ <!-- Google Web Fonts -->
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+ <!-- Icon Font Stylesheet -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+ <!-- Libraries Stylesheet -->
+ <link href="{{url_for('static', filename = 'lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
+ <!-- Customized Bootstrap Stylesheet -->
+ <link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+
+ <!-- Template Stylesheet -->
+ <link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+
+            <!-- Topbar Start -->
+            <div class="container-fluid px-5 d-none d-lg-block">
+                <div class="row gx-5 py-3 align-items-center">
+                    <div class="col-lg-3">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
+                            <h2 class="mb-0">01-544617</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="/" class="navbar-brand ms-lg-5">
+                                <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Crop</span>Recommend</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="d-flex align-items-center justify-content-end">
+<!--                            <a href="{{ url_for('logout') }}" style="font-size:22px; margin-right: 16px;" class = "text-secondary">Logout</a>-->
+                            <a class="btn btn-primary btn-square rounded-circle me-2" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-primary btn-square rounded-circle me-2" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-square rounded-circle" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+            <!-- Topbar End -->
+            <hr size="1" style="color: green;">
+        
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <!-- <a class="navbar-brand" href="/dashboard">Dashboard</a> -->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link active" href="/dashboard">Dashboard</a>
+                      <a class="nav-link active" href="/admin/crops">Crops</a>
+                      <a class="nav-link active" href="/admin/parameters">Parameters</a>
+                      <a class="nav-link active" href="/admin/testinomials">Testinomials</a>
+                      <a class="nav-link btn-primary navbar-brand" href="/admin/testing">Testing</a>
+                      <a class="nav-link active" href="/admin/fertilizer">Fertilizer</a>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+
+
+    
+    <div class="container">
+        <span style="font-size: 38px; color: green;">Please Enter Preferred Values</span>
+        <div class="row">
+            <form action="/predict" method="POST">
+                <div class="row">
+                    
+                    <div class="col-md-4 my-2">
+                        <div class="bfg">
+                            <label for="nitrogen">Nitrogen (N)<span class="text-danger"> *</span></label>
+                            <input type="number" id="nitrogen" name="n" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 my-2">
+                        <div class="bfg">
+                            <label for="phosphorus">Phosphorus (P)<span class="text-danger"> *</span></label>
+                            <input type="number" id="phosphorus" name="p" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-2">
+                        <div class="bfg">
+                            <label for="potassium">Potassium (K)<span class="text-danger"> *</span></label>
+                            <input type="number" id="potassium" name="k" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 my-2">
+                        <div class="bfg">
+                            <label for="temperature">Temperature (T)<span class="text-danger"> *</span></label>
+                            <input type="number" id="temperature" name="t" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 my-2">
+                        <div class="bfg">
+                            <label for="humidity">Humidity (H)<span class="text-danger"> *</span></label>
+                            <input type="number" id="humidity" name="h" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-2">
+                        <div class="bfg">
+                            <label for="ph">Ph-value<span class="text-danger"> *</span></label>
+                            <input type="number" id="ph" name="ph" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-2">
+                        <div class="bfg">
+                            <label for="rainfall">Rainfall<span class="text-danger"> *</span></label>
+                            <input type="number" id="rainfall" name="r" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="com-md-12 my-3">
+                    <button type="submit" class="btn btn-primary my-3">Get Recommendation</button>
+                </div>
+            </form>
+        </div>
+        {% if resultRFC %}
+        <table class="table">
+            <tr>
+                <th><h3 class="text-primary">#SN<h3></th>
+                <th><h3 class="text-primary">#Algorithm<h3></th>
+                <th><h3 class="text-primary">#Prediction<h3></th>
+                <th><h3 class="text-primary">#Accuracy<h3></th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Random Forest</td>
+                <td>
+                    {% if resultRFC %}
+                    {{resultRFC}}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if accuracy_valueRFC %}
+                    {{accuracy_valueRFC}} %
+                    {% endif %}
+                </td>
+            </tr>
+<!--            <tr>-->
+<!--                <td>2.</td>-->
+<!--                <td>Naive Bays</td>-->
+<!--                <td>-->
+<!--                    {% if resultNB %}-->
+<!--                    {{resultNB}}-->
+<!--                    {% endif %}-->
+
+<!--                </td>-->
+<!--                <td>-->
+<!--                    {% if accuracy_valueNB %}-->
+<!--                    {{accuracy_valueNB}} %-->
+<!--                    {% endif %}-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>3.</td>-->
+<!--                <td>Decision Tree</td>-->
+<!--                <td>-->
+<!--                    {% if resultDT %}-->
+<!--                    {{resultDT}}-->
+<!--                    {% endif %}-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    {% if accuracy_valueDT %}-->
+<!--                    {{accuracy_valueDT}} %-->
+<!--                    {% endif %}-->
+
+<!--                </td>-->
+<!--            </tr>-->
+            <tr>
+                <td>2.</td>
+                <td>K-Nearest (KNN)</td>
+                <td>
+                    {% if resultKNN %}
+                    {{resultKNN}}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if accuracy_valueKNN %}
+                    {{accuracy_valueKNN}} %
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+        {% endif %}
+    </div>
+
+
+    <!-- {% if resultRFC %}
+    <h1>{{resultRFC}}</h1>
+    {% endif %} -->
+
+    <!-- {% if accuracy_valueRFC %}
+    <h1>{{accuracy_valueRFC}}</h1>
+    {% endif %} -->
+
+    <!-- {% if resultNB %}
+    <h1>{{resultNB}}</h1>
+    {% endif %} -->
+
+    <!-- {% if accuracy_valueNB %}
+    <h1>{{accuracy_valueNB}}</h1>
+    {% endif %} -->
+
+    <!-- {% if resultDT %}
+    <h1>{{resultDT}}</h1>
+    {% endif %} -->
+
+
+    <!-- {% if accuracy_valueDT %}
+    <h1>{{accuracy_valueDT}}</h1>
+    {% endif %} -->
+    
+    <!-- {% if resultKNN %}
+    <h1>{{resultKNN}}</h1>
+    {% endif %} -->
+
+
+    <!-- {% if accuracy_valueKNN %}
+    <h1>{{accuracy_valueKNN}}</h1>
+    {% endif %} -->
+
+
+
+
+
+          <!-- Footer Start -->
+          <div class="container-fluid bg-footer bg-primary text-white mt-5">
+            <div class="container">
+                <div class="row gx-5">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="row gx-5">
+                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                <h4 class="text-white mb-4">Get In Touch</h4>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-geo-alt text-white me-2"></i>
+                                    <p class="text-white mb-0">123 Street, New York, USA</p>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-envelope-open text-white me-2"></i>
+                                    <p class="text-white mb-0">info@example.com</p>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-telephone text-white me-2"></i>
+                                    <p class="text-white mb-0">+012 345 67890</p>
+                                </div>
+                                <div class="d-flex mt-4">
+                                    <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn btn-secondary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                                <h4 class="text-white mb-4">Quick Links</h4>
+                                <div class="d-flex flex-column justify-content-start">
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>About Us</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our Services</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Meet The Team</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Latest Blog</a>
+                                    <a class="text-white" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                                <h4 class="text-white mb-4">Popular Links</h4>
+                                <div class="d-flex flex-column justify-content-start">
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>About Us</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our Services</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Meet The Team</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Latest Blog</a>
+                                    <a class="text-white" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4 col-md-6 mt-lg-n5">
+                        <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-secondary p-5">
+                            <h4 class="text-white">Newsletter</h4>
+                            <h6 class="text-white">Subscribe Our Newsletter</h6>
+                            <p>Amet justo diam dolor rebum lorem sit stet sea justo kasd</p>
+                            <form action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                    <button class="btn btn-primary">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white py-4">
+            <div class="container text-center">
+                <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">www.croprecommendationsystem.com.np</a>. All Rights Reserved. Designed by <a class="text-secondary fw-bold" href="#">Suman , Keshav</a></p>
+            </div>
+        </div>
+        <!-- Footer End -->
+    
+    
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-secondary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    
+    
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+    
+    
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="{{url_for('static', filename = 'lib/easing/easing.min.js')}}"></script>
+            <script src="{{url_for('static', filename = 'lib/waypoints/waypoints.min.js')}}"></script>
+            <script src="{{url_for('static', filename = 'lib/counterup/counterup.min.js')}}"></script>
+            <script src="{{url_for('static', filename = 'lib/owlcarousel/owl.carousel.min.js')}}"></script>
+        
+            <!-- Template Javascript -->
+            <script src="{{url_for('static', filename = 'js/main.js')}}"></script>
+    
+    
+    
+            
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            const field1Value = parseFloat(document.getElementById('nitrogen').value);
+            const field2Value = parseFloat(document.getElementById('phosphorus').value);
+            const field3Value = parseFloat(document.getElementById('potassium').value);
+            const field4Value = parseFloat(document.getElementById('temperature').value);
+            const field5Value = parseFloat(document.getElementById('humidity').value);
+            const field6Value = parseFloat(document.getElementById('ph').value);
+            const field7Value = parseFloat(document.getElementById('rainfall').value);
+
+            // Add similar lines for other fields
+
+            if (field1Value < 0 || field2Value < 0 || field3Value < 0 || field4Value < 0 || field5Value < 0 || field6Value < 0 || field7Value < 0) {
+                event.preventDefault();
+                alert("Please enter non-negative values.");
+            }
+        });
+    });
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+</body>
+</html>

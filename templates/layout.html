@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>document</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/plant.png') }}"/>
+
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+     <!-- Favicon -->
+     <link href="{{url_for('static', filename = 'img/favicon.ico')}}" rel="icon">
+
+     <!-- Google Web Fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+     <!-- Icon Font Stylesheet -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+     <!-- Libraries Stylesheet -->
+     <link href="{{url_for('static', filename = 'lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
+     <!-- Customized Bootstrap Stylesheet -->
+     <link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+
+     <!-- Template Stylesheet -->
+     <link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet">
+
+
+
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+ <!-- Favicon -->
+ <link href="{{url_for('static', filename = 'img/favicon.ico')}}" rel="icon">
+
+ <!-- Google Web Fonts -->
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+ <!-- Icon Font Stylesheet -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+ <!-- Libraries Stylesheet -->
+ <link href="{{url_for('static', filename = 'lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
+ <!-- Customized Bootstrap Stylesheet -->
+ <link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+
+ <!-- Template Stylesheet -->
+ <link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet">
+
+<!--	<style>-->
+<!--		html {-->
+<!--			font-size: 1rem;-->
+<!--		}-->
+
+<!--		@media (min-width: 576px) {-->
+<!--			html {-->
+<!--				font-size: 1.25rem;-->
+<!--			}-->
+<!--		}-->
+
+<!--		@media (min-width: 768px) {-->
+<!--			html {-->
+<!--				font-size: 1.5rem;-->
+<!--			}-->
+<!--		}-->
+
+<!--		@media (min-width: 992px) {-->
+<!--			html {-->
+<!--				font-size: 1.75rem;-->
+<!--			}-->
+<!--		}-->
+
+<!--		@media (min-width: 1200px) {-->
+<!--			html {-->
+<!--				font-size: 2rem;-->
+<!--			}-->
+
+<!--			html {-->
+<!--				font-size: 1rem;-->
+<!--			}-->
+
+<!--			h1 {-->
+<!--				font-size: 1.2rem;-->
+<!--			}-->
+
+<!--			h2 {-->
+<!--				font-size: 1.1rem;-->
+<!--			}-->
+
+<!--			@media (min-width: 768px) {-->
+<!--				html {-->
+<!--					font-size: 1.1rem;-->
+<!--				}-->
+
+<!--				h1 {-->
+<!--					font-size: 1.3rem;-->
+<!--				}-->
+
+<!--				h2 {-->
+<!--					font-size: 1.2rem;-->
+<!--				}-->
+<!--			}-->
+
+<!--			@media (min-width: 991px) {-->
+<!--				html {-->
+<!--					font-size: 1.2rem;-->
+<!--				}-->
+
+<!--				h1 {-->
+<!--					font-size: 1.5rem;-->
+<!--				}-->
+
+<!--				h2 {-->
+<!--					font-size: 1.4rem;-->
+<!--				}-->
+<!--			}-->
+
+<!--			@media (min-width: 1200px) {-->
+<!--				html {-->
+<!--					font-size: 1.2rem;-->
+<!--				}-->
+
+<!--				h1 {-->
+<!--					font-size: 1.7rem;-->
+<!--				}-->
+
+<!--				h2 {-->
+<!--					font-size: 1.6rem;-->
+<!--				}-->
+<!--			}-->
+
+<!--		}-->
+<!--	</style>-->
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	</body>
+	<!-- css files -->
+<!--	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
+<!--		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+<!--	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />-->
+<!--	&lt;!&ndash; bootstrap css &ndash;&gt;-->
+<!--	<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />-->
+<!--	&lt;!&ndash; custom css &ndash;&gt;-->
+<!--	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">&lt;!&ndash; fontawesome css &ndash;&gt;-->
+<!--	&lt;!&ndash; //css files &ndash;&gt;-->
+<!--	&lt;!&ndash; <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png?') }}"> &ndash;&gt;-->
+
+
+	<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
+
+
+<!--	&lt;!&ndash; google fonts &ndash;&gt;-->
+<!--	<link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese"-->
+<!--		rel="stylesheet">-->
+<!--	&lt;!&ndash; //google fonts &ndash;&gt;-->
+
+<!--	<style>-->
+<!--		header {-->
+<!--			background-color: rgba(30, 30, 30, 1);-->
+<!--;-->
+<!--			margin-top: 0rem;-->
+<!--			display: block;-->
+
+<!--		}-->
+	</style>
+</head>
+
+<body>
+
+
+ <!-- Topbar Start -->
+            <div class="container-fluid px-5 d-none d-lg-block">
+                <div class="row gx-5 py-3 align-items-center">
+                    <div class="col-lg-3">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
+                            <h2 class="mb-0">01-544617</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="/" class="navbar-brand ms-lg-5">
+                                <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Crop</span>Recommend</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="d-flex align-items-center justify-content-end">
+<!--                            <a href="{{ url_for('logout') }}" style="font-size:22px; margin-right: 16px;" class = "text-secondary">Logout</a>-->
+                            <a class="btn btn-primary btn-square rounded-circle me-2" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-primary btn-square rounded-circle me-2" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-square rounded-circle" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Topbar End -->
+            <hr size="1" style="color: green;">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="/dashboard">Dashboard</a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" href="/dashboard">Dashboard</a>
+              <a class="nav-link active" href="/admin/crops">Crops</a>
+              <a class="nav-link active" href="/admin/parameters">Parameters</a>
+              <a class="nav-link active" href="/admin/testinomials">Testinomials</a>
+              <a class="nav-link active" href="/admin/testing">Testing</a>
+              <a class="nav-link navbar-brand btn-primary" href="/admin/fertilizer">Fertilizer</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+	{% block body %} {% endblock %}
+
+
+	 <div class="container-fluid bg-footer bg-primary text-white mt-5">
+            <div class="container">
+                <div class="row gx-5">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="row gx-5">
+                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                <h4 class="text-white mb-4">Get In Touch</h4>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-geo-alt text-white me-2"></i>
+                                    <p class="text-white mb-0">123 Street, New York, USA</p>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-envelope-open text-white me-2"></i>
+                                    <p class="text-white mb-0">info@example.com</p>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-telephone text-white me-2"></i>
+                                    <p class="text-white mb-0">+012 345 67890</p>
+                                </div>
+                                <div class="d-flex mt-4">
+                                    <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn btn-secondary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                                <h4 class="text-white mb-4">Quick Links</h4>
+                                <div class="d-flex flex-column justify-content-start">
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>About Us</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our Services</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Meet The Team</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Latest Blog</a>
+                                    <a class="text-white" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                                <h4 class="text-white mb-4">Popular Links</h4>
+                                <div class="d-flex flex-column justify-content-start">
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>About Us</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our Services</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Meet The Team</a>
+                                    <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Latest Blog</a>
+                                    <a class="text-white" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4 col-md-6 mt-lg-n5">
+                        <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-secondary p-5">
+                            <h4 class="text-white">Newsletter</h4>
+                            <h6 class="text-white">Subscribe Our Newsletter</h6>
+                            <p>Amet justo diam dolor rebum lorem sit stet sea justo kasd</p>
+                            <form action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                    <button class="btn btn-primary">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white py-4">
+            <div class="container text-center">
+                <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">www.croprecommendationsystem.com.np</a>. All Rights Reserved. Designed by <a class="text-secondary fw-bold" href="#">Suman , Keshav</a></p>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-secondary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="{{url_for('static', filename = 'lib/easing/easing.min.js')}}"></script>
+            <script src="{{url_for('static', filename = 'lib/waypoints/waypoints.min.js')}}"></script>
+            <script src="{{url_for('static', filename = 'lib/counterup/counterup.min.js')}}"></script>
+            <script src="{{url_for('static', filename = 'lib/owlcarousel/owl.carousel.min.js')}}"></script>
+
+            <!-- Template Javascript -->
+            <script src="{{url_for('static', filename = 'js/main.js')}}"></script>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+   
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            const field1Value = parseFloat(document.getElementById('Nitrogen').value);
+            const field2Value = parseFloat(document.getElementById('Phosphorous').value);
+            const field3Value = parseFloat(document.getElementById('Pottasium').value);
+
+
+            // Add similar lines for other fields
+
+            if (field1Value < 0 || field2Value < 0 || field3Value < 0 ) {
+                event.preventDefault();
+                alert("Please enter non-negative values.");
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            const cropValue = document.getElementById('crop').value;
+
+            if (cropValue === "") {
+                event.preventDefault();
+                alert("Please select a crop from the dropdown.");
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

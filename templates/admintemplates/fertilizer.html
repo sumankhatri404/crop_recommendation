@@ -1,0 +1,110 @@
+{% extends 'layout.html' %} {% block body %}
+
+<!--<style>-->
+<!--  html body {-->
+<!--    background-color: white;-->
+<!--  }-->
+<!--</style>-->
+<!--Form Section-->
+<br/>
+
+<div class="container">
+    <span style="font-size: 38px; color: green;">
+    Get informed advice on fertilizer based on soil
+</span>
+    <div class="row">
+        <form method="POST" action="{{ url_for('fert_recommend') }}">
+            <div class="row">
+                <div class="col-md-4 my-2">
+                    <div class="bfg">
+                        <label for="nitrogen">Nitrogen (N)<span class="text-danger"> *</span></label>
+                        <input
+                                type="number"
+                                class="form-control"
+                                id="Nitrogen"
+                                name="nitrogen"
+                                placeholder="Enter the value (example:50)"
+                                required/>
+                    </div>
+                </div>
+
+                <div class="col-md-4 my-2">
+                    <div class="bfg">
+                        <label for="Phosphorous">Phosphorus (P)<span class="text-danger"> *</span></label>
+                        <input
+                                type="number"
+                                class="form-control"
+                                id="Phosphorous"
+                                name="phosphorous"
+                                placeholder="Enter the value (example:50)"
+
+                                required
+                        />
+                    </div>
+                </div>
+
+                <div class="col-md-4 my-2">
+                    <div class="bfg">
+                        <label for="Pottasium">Potassium (K)<span class="text-danger"> *</span></label>
+                        <input
+                                type="number"
+                                class="form-control"
+                                id="Pottasium"
+                                name="pottasium"
+                                placeholder="Enter the value (example:50)"
+
+                                required
+                        />
+                    </div>
+                </div>
+                    <br><br>
+                <div class="col-md-4 my-2">
+                    <div class="bfg">
+                        <label for="crop"><b>Crop you want to grow</b></label>
+                        <select
+                                name="cropname"
+                                class="form-control"
+                                id="crop"
+                                placeholder="Select a crop"
+
+                                required>
+                            <option value="" selected disabled>Select crop</option>
+                            <option>rice</option>
+                            <option>maize</option>
+                            <option>chickpea</option>
+                            <option>kidneybeans</option>
+                            <option>pigeonpeas</option>
+                            <option>mothbeans</option>
+                            <option>mungbean</option>
+                            <option>blackgram</option>
+                            <option>lentil</option>
+                            <option>pomegranate</option>
+                            <option>banana</option>
+                            <option>mango</option>
+                            <option>grapes</option>
+                            <option>watermelon</option>
+                            <option>muskmelon</option>
+                            <option>apple</option>
+                            <option>orange</option>
+                            <option>papaya</option>
+                            <option>coconut</option>
+                            <option>cotton</option>
+                            <option>jute</option>
+                            <option>coffee</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-12 my-3 d-flex justify-content-center">
+                    <button
+                            type="submit"
+                            class="btn btn-success">
+                        Predict
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}

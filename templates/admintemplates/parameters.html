@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Document</title>
+    <script>
+    // Add an event listener to the logout link
+    document.getElementById('logout-button').addEventListener('click', function(event) {
+        // Prevent the default behavior of the link
+        event.preventDefault();
+
+        // Redirect to the logout URL
+        window.location.href = this.href;
+
+        // Reload the page after a brief delay (e.g., 1 second)
+        setTimeout(function() {
+            location.reload();
+        }, 1000); // 1000 milliseconds = 1 second
+    });
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+
+        <!-- Favicon -->
+        <link href="{{url_for('static', filename = 'img/favicon.ico')}}" rel="icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+        <!-- Libraries Stylesheet -->
+        <link href="{{url_for('static', filename = 'lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+    
+        <!-- Template Stylesheet -->
+        <link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet">
+
+
+
+        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+    <!-- Favicon -->
+    <link href="{{url_for('static', filename = 'img/favicon.ico')}}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{url_for('static', filename = 'lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+        <!-- Topbar Start -->
+        <div class="container-fluid px-5 d-none d-lg-block">
+            <div class="row gx-5 py-3 align-items-center">
+                <div class="col-lg-3">
+                    <div class="d-flex align-items-center justify-content-start">
+                        <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
+                        <h2 class="mb-0">01-544617</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="/" class="navbar-brand ms-lg-5">
+                            <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Crop</span>Recommend</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="d-flex align-items-center justify-content-end">
+<!--                      <a href="{{ url_for('logout') }}" id="logout-button" style="font-size:22px; margin-right: 16px;" class = "text-secondary">Logout</a>-->
+                        <a class="btn btn-primary btn-square rounded-circle me-2" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-square rounded-circle me-2" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-square rounded-circle" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div>
+                        <!-- <a style="font-size:22px" href="/login" class = "text-primary"> Login</a> -->
+                        <!-- <a href="/register" style="font-size:22px" class = "text-secondary"> Register</a> -->
+                        <!-- <a href="/admin/dashboard" class="text-primary">Login</a> -->
+                        <!-- <a href="/admin/dashboard" class="text-secondary">Register</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+        <hr size="1" style="color: green;">
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="/dashboard">Dashboard</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="/dashboard">Dashboard</a>
+            <a class="nav-link active" href="/admin/crops">Crops</a>
+            <a class="nav-link  navbar-brand btn-primary" href="/admin/parameters">Parameters</a>
+            <a class="nav-link active" href="/admin/testinomials">Testinomials</a>
+            <a class="nav-link active" href="/admin/testing">Testing</a>
+            <a class="nav-link active" href="/admin/fertilizer">Fertilizer</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+
+  <div class="container">
+  <span style="font-size: 38px; color: green;">Records of Testing Parameters</span>
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>1. Nitrogen</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Nitrogen is the chemical element with the symbol N and atomic number 7. Nitrogen is a nonmetal and the lightest member of group 15 of the periodic table, often called the pnictogens. It is a common element in the universe, estimated at seventh in total abundance in the Milky Way and the Solar System. At standard temperature and pressure, two atoms of the element bond to form N2, a colorless and odorless diatomic gas. N2 forms about 78% of Earth's atmosphere.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>   
+      </div>
+    </div>
+  
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>2. Phosphorus</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Phosphorus is a chemical element with the symbol P and atomic number 15. Elemental phosphorus exists in two major forms, white phosphorus and orangered phosphorus, but because it is highly reactive, phosphorus is never found as a free element on Earth. It has a concentration in the Earth's crust of about one gram per kilogram. In minerals, phosphorus generally occurs as phosphate.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>      
+      </div>
+    </div>
+
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>3. Potassium</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Potassium is an essential mineral that is needed by all tissues in the body. It is sometimes referred to as an electrolyte because it carries a small electrical charge that activates various cell and nerve functions. Potassium is found naturally in many foods and as a supplement. Its main role in the body is to help maintain normal levels of fluid inside our cells.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>   
+      </div>
+    </div>
+
+
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>4. Temperature</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Temperature is an essential factor in farming because it determines whether plants can thrive in the environment. Soil temperature importance at the very beginning of crop development also determines the time for sowing and planting. Since monthly, seasonal, and daily fluctuations of the ground’s temperature profoundly affect plant growth, farmers must regulate them, specifically during the hottest times when the sun is most intense. Farmers can optimize the timing of field activities by learning more about how the temperature of soil is affecting plant growth.</p>
+        <i style="color: orangered">Measurement: (celcius)</i><br>
+        <i style="color: orangered">Input Range: (...)</i> 
+      </div>
+    </div>
+
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>4. Humidity</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Humidity is important to make photosynthesis possible. In the case of Anthurium, good humidity around the plant is even more important than for most other crops, because the plant can only absorb a reduced amount of humidity and hence has less water evaporation than most plants. If the plant loses too much water, the stomata will close with the result that photosynthesis stops. If this happens, no further CO2 can be absorbed, and CO2 is required to keep the photosynthesis going. In addition, the temperature of a plant on a sunny day is mainly regulated by cooling through evaporation. Evaporating water can evacuate a lot of plant heat and is an efficient way of cooling for a plant. Open stomata ensure that a lot of heat can be evacuated. By closing the stomata, the plant temperature will often increase quickly.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>   
+      </div>
+    </div>
+
+
+
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>5. Ph Value</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Potassium is an essential mineral that is needed by all tissues in the body. It is sometimes referred to as an electrolyte because it carries a small electrical charge that activates various cell and nerve functions. Potassium is found naturally in many foods and as a supplement. Its main role in the body is to help maintain normal levels of fluid inside our cells.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>   
+      </div>
+    </div>
+
+
+
+
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>7. Rainfall</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Rainfall is an important factor in agricultural production. Without adequate rainfall, crops cannot grow, and yields can be limited. Farmers need to understand how much rainfall their crops need to produce a good yield. Organic farming has also a great importance of rainfall as it mostly depends on the natural climatic conditions. In general, most crops need between 20-40 inches of rain per year. This amount can vary based on the type of crop, the soil type, and the climate of the region. The amount of rainfall also needs to be distributed evenly throughout the growing season for the crops to benefit from it. This data can then be used to adjust and optimize their irrigation systems to ensure the crops are getting the right amount of water. Additionally, farmers can use meteorological data to plan for drought conditions so that they can take measures to minimize losses.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>   
+      </div>
+    </div>
+    <br>
+  </div>
+
+      <!-- Footer Start -->
+      <div class="container-fluid bg-footer bg-primary text-white mt-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <h4 class="text-white mb-4">Get In Touch</h4>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-white me-2"></i>
+                                <p class="text-white mb-0">123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-white me-2"></i>
+                                <p class="text-white mb-0">info@example.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-white me-2"></i>
+                                <p class="text-white mb-0">+012 345 67890</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-secondary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>About Us</a>
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our Services</a>
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Meet The Team</a>
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Latest Blog</a>
+                                <a class="text-white" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <h4 class="text-white mb-4">Popular Links</h4>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>About Us</a>
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our Services</a>
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Meet The Team</a>
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Latest Blog</a>
+                                <a class="text-white" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-4 col-md-6 mt-lg-n5">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-secondary p-5">
+                        <h4 class="text-white">Newsletter</h4>
+                        <h6 class="text-white">Subscribe Our Newsletter</h6>
+                        <p>Amet justo diam dolor rebum lorem sit stet sea justo kasd</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                <button class="btn btn-primary">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">www.croprecommendationsystem.com.np</a>. All Rights Reserved. Designed by <a class="text-secondary fw-bold" href="#">Suman , Keshav</a></p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{{url_for('static', filename = 'lib/easing/easing.min.js')}}"></script>
+        <script src="{{url_for('static', filename = 'lib/waypoints/waypoints.min.js')}}"></script>
+        <script src="{{url_for('static', filename = 'lib/counterup/counterup.min.js')}}"></script>
+        <script src="{{url_for('static', filename = 'lib/owlcarousel/owl.carousel.min.js')}}"></script>
+    
+        <!-- Template Javascript -->
+        <script src="{{url_for('static', filename = 'js/main.js')}}"></script>
+
+
+
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
+  
+
+
+
+</body>
+</html>
